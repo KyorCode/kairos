@@ -1,0 +1,22 @@
+{
+  "name": "kairos",
+  "version": "0.0.0",
+  "description": "The great, opportune or supreme moment",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyorCode/kairos.git"
+  },
+  "keywords": [
+    "timetrackin"
+  ],
+  "author": "t-c@live.be",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyorCode/kairos/issues"
+  },
+  "homepage": "https://github.com/KyorCode/kairos"
+}
