@@ -9,10 +9,12 @@ gulp.task('jshint', function () {
         .pipe(jshint.reporter('default'));
 });
 
-gulp.task('default', ['jshint'], function () {
+gulp.task('docs',function(){
     gulp.src('README.md')
         .pipe(markdown())
         .pipe(gulp.dest('docs'))
+});
 
+gulp.task('default', ['docs','jshint'], function () {
     gulp.watch(['./lib/*.js', './test/*.js'], ['jshint']);
 });
