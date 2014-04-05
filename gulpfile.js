@@ -12,9 +12,15 @@ gulp.task('jshint', function () {
 gulp.task('docs',function(){
     gulp.src('README.md')
         .pipe(markdown())
-        .pipe(gulp.dest('docs'))
+        .pipe(gulp.dest('docs'));
 });
 
-gulp.task('default', ['docs','jshint'], function () {
+gulp.task('sass',function(){
+   gulp.src('./srv/styles/*.scss')
+       .pipe(sass())
+       .pipe(gulp.dest('./public/css'));
+});
+
+gulp.task('default', ['docs','jshint','sass'], function () {
     gulp.watch(['./lib/*.js', './test/*.js'], ['jshint']);
 });
